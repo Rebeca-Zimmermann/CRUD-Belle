@@ -1,0 +1,123 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 25px;
+    margin-top: 50px;
+    width: 650px;
+    text-align: center;
+    background: #fffafc;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 2px solid #f48fb1;
+}
+
+h1 {
+    font-size: 26px;
+    color: #c2185b;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#form input {
+    padding: 12px;
+    border: 1px solid #f8bbd0;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#form input:focus {
+    border-color: #c2185b;
+    outline: none;
+    box-shadow: 0 0 5px rgba(194,24,91,0.5);
+}
+
+button {
+    grid-column: span 2;
+    background: #c2185b;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #880e4f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+    background-color: #f48fb1;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #fff0f5;
+}
+
+td button {
+    margin: 2px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+td button:first-child {
+    background-color: #29b6f6;
+    color: white;
+}
+
+td button:first-child:hover {
+    background-color: #0288d1;
+}
+
+td button:last-child {
+    background-color: #ef5350;
+    color: white;
+}
+
+td button:last-child:hover {
+    background-color: #c62828;
+}
