@@ -1,0 +1,42 @@
+CREATE TABLE produtos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    descricao TEXT,
+    preco DECIMAL(10,2) NOT NULL,
+    quantidade_estoque INT NOT NULL DEFAULT 0,
+    categoria VARCHAR(100),
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, categoria)
+VALUES
+('Mouse Gamer', '16000 DPI, RGB', 159.00, 30, 'Periféricos'),
+('Cadeira Gamer', 'Reclinável, couro PU', 899.00, 5, 'Móveis'),
+('Monitor 24"', '144Hz Full HD', 799.90, 10, 'Monitores');
+
+--------------
+
+SELECT * FROM produtos;
+
+(Ordenar por preço descrescente): SELECT * FROM produtos ORDER BY preco DESC;
+
+(Filtrar com condições): SELECT * FROM produtos WHERE preco > 200 AND quantidade_estoque > 10;
+
+-------------
+
+UPDATE produtos
+SET nome = 'Teclado Redragon',
+    preco = 249.90,
+    quantidade_estoque = 20,
+    categoria = 'Periféricos'
+WHERE id = 1;
+
+------------
+
+DELETE FROM produtos WHERE id = 3;
+
+------------
+
+ALTER TABLE produtos
+ADD fornecedor VARCHAR(100);
+
