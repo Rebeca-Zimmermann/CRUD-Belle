@@ -6,6 +6,7 @@ CREATE TABLE produtos (
     quantidade_estoque INT NOT NULL DEFAULT 0,
     categoria VARCHAR(100),
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, categoria)
